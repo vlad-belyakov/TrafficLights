@@ -21,6 +21,10 @@
 ```
 public record Event(int sourceId, String state)
 ```
+Для создания очереди был использован класс LinkedList:
+```
+private final Queue<Event> eventQueue;
+```
 Для создания и запуска нитей, был использован ExecutorService:
 ```
 ExecutorService service = Executors.newFixedThreadPool(12)
